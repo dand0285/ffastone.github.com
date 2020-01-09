@@ -10,10 +10,10 @@
 
 ### 1.配置aaPanel
 
-你需要在 [aaPanel](https://forum.aapanel.com/d/9-aapanel-linux-panel-6-5-4-installation-tutorial) 选择你的系统获得安装方式。这里以 debian 作为系统环境进行安装。
+
 
 ```shell
-wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bash install.sh
+yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh
 ```
 
 安装完成后我们登陆 aaPanel 进行环境的安装。
@@ -48,7 +48,7 @@ PHP version：PHP-73
 
 Submit 完成创建。
 
-完成创建后访问站点目录删除目录下的所有文件，.user.ini 文件需要在 aaPanel 下单独点击 Del 删除。
+完成创建后访问站点目录删除目录下的所有文件，.user.ini 文件需要在 btPanel 下单独点击 Del 删除。
 
 添加完成后编辑添加的站点 > Site directory > Running directory 选择 /public 保存。
 
@@ -74,7 +74,7 @@ location ~ .*\.(js|css)?$
 
 ### 5.安装V2Board
 
-通过SSH登录到服务器后访问站点路径如：/www/wwwroot/domain.com。
+通过SSH登录到服务器后访问站点路径如：/www/wwwroot/js.vvshop.me。
 
 以下命令都需要在站点目录进行执行。
 
@@ -123,7 +123,7 @@ DB_PASSWORD=数据库密码
 
 ```shell
 # domain.com 请更改为站点域名且路径必须存在
-chown -R www ../domain.com
+chown -R www ../js.vvshop.me
 ```
 
 执行命令进行面板的安装。
@@ -144,7 +144,7 @@ aaPanel 面板 > Cron。
 Type of Task：Shell Script
 Name of Task：v2board
 Period：N Minutes 1 Minute
-Script content：php /www/wwwroot/domain.com/artisan schedule:run
+Script content：php /www/wwwroot/js.vvshop.me/artisan schedule:run
 ```
 
 根据上述信息添加每1分钟执行一次的定时任务。

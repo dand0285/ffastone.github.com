@@ -82,7 +82,7 @@ location ~ .*\.(js|css)?$
 
 ```shell
 # 更新网站到1.02版本并更新数据库
-git fetch --all && git reset --hard origin/master && git pull origin 1.0.2 && php artisan v2board:update
+git fetch --all && git reset --hard origin/master && git pull origin 1.0.3 && php artisan v2board:update
 
 # 1.0.1 为当前 V2Board 版本号
 git clone -b 1.0.1 https://github.com/v2board/v2board.git ./

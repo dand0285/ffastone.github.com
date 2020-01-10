@@ -74,7 +74,7 @@ location ~ .*\.(js|css)?$
 
 ### 5.安装V2Board
 
-通过SSH登录到服务器后访问站点路径如：/www/wwwroot/js.vvshop.me。
+通过SSH登录到服务器后访问站点路径如：/www/wwwroot/js.xxx.me。
 
 以下命令都需要在站点目录进行执行。
 
@@ -123,7 +123,7 @@ DB_PASSWORD=数据库密码
 
 ```shell
 # domain.com 请更改为站点域名且路径必须存在
-chown -R www ../js.vvshop.me
+chown -R www ../js.xxx.me
 ```
 
 执行命令进行面板的安装。
@@ -144,7 +144,7 @@ aaPanel 面板 > Cron。
 Type of Task：Shell Script
 Name of Task：v2board
 Period：N Minutes 1 Minute
-Script content：php /www/wwwroot/js.vvshop.me/artisan schedule:run
+Script content：php /www/wwwroot/js.xxx.me/artisan schedule:run
 ```
 
 根据上述信息添加每1分钟执行一次的定时任务。
